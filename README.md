@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# PurposeBridge
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+I built PurposeBridge at BYU's AI Day Hackathon to explore a simple idea: a class assignment can also be useful work for a local nonprofit. The prototype lets judges follow one community challenge from a rough request to student work the nonprofit can review and adopt.
 
-Currently, two official plugins are available:
+[Open the browser demo](https://cameronjohnboyle2-hub.github.io/purposebridge/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Try the workflow
 
-## React Compiler
+1. **Nonprofit director:** Post a community need and use the challenge refiner to turn rough notes into a brief.
+2. **Teacher:** Pick up the challenge, adapt it into a class project with milestones and a rubric, and assign it to a student team.
+3. **Student team lead:** Review the assignment, run a feedback check, and submit a draft for teacher review.
+4. **Teacher and nonprofit director:** The teacher reviews and forwards the work. The nonprofit can mark it adopted and record a sample community outcome.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Use the persona switcher at the top to move between roles. The teacher review step is intentional: students can work on a real problem while the teacher controls what leaves the classroom.
 
-## Expanding the Oxlint configuration
+## Prototype scope
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- The three personas, organizations, and impact examples are demo data. Updates persist locally in your browser.
+- Challenge refinement, curriculum adaptation, and student feedback use simulated responses. The demo runs without a model API key.
+- Role switching demonstrates the workflow. Production use would require authenticated accounts, server-side permissions, and a student privacy review.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Run locally
+
+Built with React, TypeScript, Vite, and Tailwind CSS.
+
+```sh
+npm ci
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Run `npm run build` to check TypeScript and build the static site.
